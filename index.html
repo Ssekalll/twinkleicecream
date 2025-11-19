@@ -33,7 +33,7 @@ header::after {
 header h1, header p {
     position: relative; z-index: 2;
 }
-header h1 { font-size: 55px; text-shadow: 3px 3px 6px #00000050; }
+header h1 { font-size: 55px; text-shadow: 3px 3px 6px #96246a50; }
 header p { font-size: 22px; }
 
 /* ===================== LANGUAGE SELECTOR ===================== */
@@ -93,7 +93,7 @@ select {
 .sunset-anim {
     width: 100%; height: 220px; margin-top: 40px;
     border-radius: 16px;
-    background: linear-gradient(to top, #ff8a65, #ffd2a8);
+    background: linear-gradient(to top, #f8aaf4, #a8e6ff);
     animation: glowing 4s infinite alternate;
 }
 @keyframes glowing {
@@ -153,7 +153,8 @@ function toggleMusic() {
 <!-- ===================== HEADER ===================== -->
 <header>
     <h1>Twinkle Ice Cream</h1>
-    <p>Di sini, tiap rasa serasa angin pantai, adem, ringan, dan manisnya nyentuh hati. Pilih scoop yang kamu suka! semoga hari mu menjadi selembut ombak yang tenang</p>
+    <p id="walecome text">
+        Di sini, tiap rasa serasa angin pantai, adem, ringan, dan manisnya nyentuh hati. Pilih scoop yang kamu suka! semoga hari mu menjadi selembut ombak yang tenang</p>
 
     <div class="language-box">
         <select id="languageSelector" onchange="changeLanguage()">
@@ -241,13 +242,13 @@ function changeLanguage() {
         id: "Di sini, tiap rasa serasa angin pantai, adem, ringan, dan manisnya nyentuh hati. Pilih scoop yang kamu suka! semoga hari mu menjadi selembut ombak yang tenang",
         en: "Here, every taste feels like a sea breeze, cool, light, and sweet, touching the heart. Choose the scoop you like! May your day be as gentle as the calm waves.",
         kr: "이곳에서는 모든 맛이 바닷바람처럼 시원하고, 가볍고, 달콤하게 마음을 어루만집니다. 마음에 드는 스쿱을 선택하세요! 잔잔한 파도처럼 상쾌한 하루를 보내시길 바랍니다.",
-        jp: "すべてのフレーバーは新鮮で高品質な素材から作られています。なめらかな食感とバランスの良い甘さが特徴です。",
-        cn: "每种口味都使用新鲜优质的原料制作。口感顺滑，甜度适中，适合任何时刻享用。",
-        th: "ทุกรสชาติทำจากวัตถุดิบสดใหม่และคุณภาพสูง เนื้อเนียนนุ่ม หวานกำลังดี เหมาะกับทุกช่วงเวลา",
-        es: "Cada sabor está elaborado con ingredientes frescos y premium. Su textura suave y dulzura equilibrada lo hacen perfecto para cualquier momento."
+        jp: "まるで海風のように、冷たく、軽やかで、甘く、心に触れる味わい。お好みの一杯をお選びください！穏やかな波のように、穏やかな一日をお過ごしください。",
+        cn: "在这里，每一口都像海风般清凉、轻盈、甘甜，沁人心脾。选择你喜欢的口味吧！愿你今天像平静的海浪一样温柔。",
+        th: "ที่นี่ ทุกรสชาติสัมผัสราวกับสายลมทะเล เย็น เบา และหวาน สัมผัสหัวใจ เลือกสกู๊ปที่คุณชอบได้เลย! ขอให้วันของคุณราบรื่นดุจดังคลื่นทะเลที่สงบ ",
+        es: "Aquí, cada sabor se siente como la brisa marina: fresco, ligero y dulce, que acaricia el corazón. ¡Elige la bola que más te guste! Que tu día sea tan apacible como las olas tranquilas."
     };
 
-    document.getElementById("description").textContent = translations[lang];
+    document.getElementById("walecome text").textContent = translations[lang];
 }
 
 /* Jalankan saat halaman pertama kali dimuat */
