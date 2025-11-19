@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Twinkle Ice Cream</title>
+
+<style>
+/* ===================== GLOBAL ===================== */
+body {
+    margin: 0;
+    font-family: 'LUCKIEST GUY', 'Baskerville Old Face';
+    background: linear-gradient(to bottom, #ffbddc, #c9f0ff);
+}
+
+/* ===================== HEADER ===================== */
+header {
+    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+header::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(255,182,193,0.35);
+}
+header h1, header p {
+    position: relative; z-index: 2;
+}
+header h1 { font-size: 55px; text-shadow: 3px 3px 6px #00000050; }
+header p { font-size: 22px; }
+
+/* ===================== LANGUAGE SELECTOR ===================== */
+.language-box {
+    z-index: 2;
+    position: relative;
+    margin-top: 20px;
+}
+select {
+    padding: 10px 15px;
+    font-size: 17px;
+    border: none;
+    border-radius: 12px;
+}
+
+/* ===================== ANIMASI AIR PANTAI ===================== */
+#wave {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    background: url('https://i.imgur.com/ax7fK5j.png');
+    background-size: 1000px 120px;
+    animation: waveMove 6s linear infinite;
+    margin-top: -30px;
+    opacity: 0.7;
+}
+@keyframes waveMove {
+    0% { background-position-x: 0; }
+    100% { background-position-x: 1000px; }
+}
+
+/* ===================== MENU SECTION ===================== */
+.menu-section { padding: 40px; text-align: center; }
+.menu-grid {
+    display: flex; flex-wrap: wrap;
+    justify-content: center; gap: 30px;
+}
+.menu-card {
+    width: 260px; background: #fff;
+    border-radius: 18px; padding: 20px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+    transition: .3s;
+}
+.menu-card:hover { transform: scale(1.06); }
+.menu-card img { width: 100%; border-radius: 15px; }
+
+/* ===================== BODY CONTENT ===================== */
+.body-content { padding: 40px; text-align: center; }
+.body-content img {
+    width: 170px; animation: float 3s infinite ease-in-out;
+}
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
+    100% { transform: translateY(0); }
+}
+.sunset-anim {
+    width: 100%; height: 220px; margin-top: 40px;
+    border-radius: 16px;
+    background: linear-gradient(to top, #ff8a65, #ffd2a8);
+    animation: glowing 4s infinite alternate;
+}
+@keyframes glowing {
+    0% { filter: brightness(0.85); }
+    100% { filter: brightness(1.15); }
+}
+
+/* ===================== MUSIC BUTTON ===================== */
+.music-btn {
+    position: fixed;
+    bottom: 20px; right: 20px;
+    padding: 12px 18px;
+    background: #ff8ec9;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    color: white;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+    background: #ffb6d5;
+    padding: 35px 20px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ============ Relax Music ============ -->
+<audio id="bgMusic" loop autoplay>
+    <source src="https://files.catbox.moe/6p3p7j.mp3" type="audio/mp3">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()">🎵 Pause Music</button>
+
+<script>
+let music = document.getElementById("bgMusic");
+let musicBtn = document.querySelector(".music-btn");
+
+function toggleMusic() {
+    if (music.paused) {
+        music.play();
+        musicBtn.textContent = "🎵 Pause Music";
+    } else {
+        music.pause();
+        musicBtn.textContent = "🎵 Play Music";
+    }
+}
+</script>
+
+<!-- ===================== HEADER ===================== -->
+<header>
+    <h1>Twinkle Ice Cream</h1>
+    <p>Di sini, tiap rasa serasa angin pantai, adem, ringan, dan manisnya nyentuh hati. Pilih scoop yang kamu suka! semoga hari mu menjadi selembut ombak yang tenang</p>
+
+    <div class="language-box">
+        <select id="languageSelector" onchange="changeLanguage()">
+            <option value="id">Indonesia</option>
+            <option value="en">Inggris</option>
+            <option value="kr">Korea</option>
+            <option value="jp">Jepang</option>
+            <option value="cn">China</option>
+            <option value="th">Thailand</option>
+            <option value="es">Spanyol</option>
+        </select>
+    </div>
+</header>
+
+<!-- ANIMASI AIR PANTAI -->
+<div id="wave"></div>
+
+<!-- ===================== MENU SECTION ===================== -->
+<section class="menu-section">
+    <h2>Menu Ice Cream</h2>
+    <div class="menu-grid">
+
+        <div class="menu-card">
+            <img src="https://akcdn.detik.net.id/community/media/visual/2021/04/23/coconut-ice-cream-ala-kreasi-sasa_43.jpeg?w=700&q=90" alt="ice cream">
+            <h3>Vanilla Fruit</h3>
+            <p>Small: Rp23.000<br>Medium: Rp37.000<br>Large: Rp46.000</p>
+        </div>
+
+        <div class="menu-card">
+            <img src="https://laz-img-sg.alicdn.com/p/794fd7ea4dc9b28b8b4723d001f9f84e.jpg" alt="ice cream">
+            <h3>Soft Strawberry</h3>
+            <p>Small: Rp23.000<br>Medium: Rp35.000<br>Large: Rp40.000</p>
+        </div>
+
+        <div class="menu-card">
+            <img src="https://www.cocoabox.com.au/wp-content/uploads/2021/02/double-chocolate-ice-cream-recipe.jpg" alt="ice cream">
+            <h3>Double Choco</h3>
+            <p>Small: Rp21.000<br>Medium: Rp34.000<br>Large: Rp43.000</p>
+        </div>
+
+        <div class="menu-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdYaKDEWrVLzgv2WWbwFk62A41dDzXBH5b-g&s" alt="ice cream">
+            <h3>BubbleGum Sprinkle</h3>
+            <p>Small: Rp20.000<br>Medium: Rp35.000<br>Large: Rp40.000</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===================== BODY CONTENT ===================== -->
+<section class="body-content">
+    <h2>Rasa Ice Cream</h2>
+    <p id="description">
+        Vanilla Fruit: Perpaduan es krim vanilla yang lembut dengan potongan buah segar. Rasanya creamy namun tetap ringan, menghadirkan keseimbangan antara manisnya vanilla dan kesegaran buah. Setiap suapan memberikan sensasi segar dan halus yang mudah dinikmati oleh semua kalangan.
+    <p id="description">
+        Es krim strawberry dengan tekstur lembut dan rasa yang natural. Manisnya tidak berlebihan, menghadirkan kesegaran buah asli dengan aroma yang halus. Cocok bagi pelanggan yang menyukai rasa ringan, segar, dan tidak terlalu tajam.
+    </p id="description">
+    Es krim coklat premium dengan cita rasa yang kaya dan pekat. Dilengkapi tambahan coklat atau saus coklat yang memberikan lapisan rasa lebih mendalam. Manisnya seimbang, menghasilkan pengalaman coklat yang intens namun tetap nyaman dinikmati.
+    </p id="description">
+    Es krim bubblegum dengan aroma manis khas permen karet. Teksturnya lembut, dilengkapi taburan sprinkle warna-warni yang memberikan sensasi renyah. Rasa ini menghadirkan kesan playful namun tetap ringan, cocok untuk anak-anak maupun dewasa.
+
+    <div class="sunset-anim"></div>
+
+    <br><br>
+    <a href="order.html" style="padding:12px 20px; background:#ff75b4; color:white; border-radius:12px; text-decoration:none;">
+        🍦 Pesan Ice Cream Sekarang
+    </a>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+    <h3>Informasi Toko</h3>
+    <p>Expired: 3 bulan dari tanggal produksi</p>
+    <p>Alamat: Jl. Bahagia No.25, Jakarta</p>
+    <p>Kontak: 0812-3456-7890 | Email: twinkleicecream@toko.com</p>
+    <p>Cara order: Pilih menu → Tentukan ukuran → Isi form pemesanan → Kami hubungi Anda!</p>
+</footer>
+
+<script>
+/* ===================== MULTI LANGUAGE FIX ===================== */
+function changeLanguage() {
+    const lang = document.getElementById("languageSelector").value;
+
+    const translations = {
+        id: "Di sini, tiap rasa serasa angin pantai, adem, ringan, dan manisnya nyentuh hati. Pilih scoop yang kamu suka! semoga hari mu menjadi selembut ombak yang tenang",
+        en: "Here, every taste feels like a sea breeze, cool, light, and sweet, touching the heart. Choose the scoop you like! May your day be as gentle as the calm waves.",
+        kr: "이곳에서는 모든 맛이 바닷바람처럼 시원하고, 가볍고, 달콤하게 마음을 어루만집니다. 마음에 드는 스쿱을 선택하세요! 잔잔한 파도처럼 상쾌한 하루를 보내시길 바랍니다.",
+        jp: "すべてのフレーバーは新鮮で高品質な素材から作られています。なめらかな食感とバランスの良い甘さが特徴です。",
+        cn: "每种口味都使用新鲜优质的原料制作。口感顺滑，甜度适中，适合任何时刻享用。",
+        th: "ทุกรสชาติทำจากวัตถุดิบสดใหม่และคุณภาพสูง เนื้อเนียนนุ่ม หวานกำลังดี เหมาะกับทุกช่วงเวลา",
+        es: "Cada sabor está elaborado con ingredientes frescos y premium. Su textura suave y dulzura equilibrada lo hacen perfecto para cualquier momento."
+    };
+
+    document.getElementById("description").textContent = translations[lang];
+}
+
+/* Jalankan saat halaman pertama kali dimuat */
+window.onload = () => {
+    changeLanguage();
+};
+</script>
+
+
+</body>
+</html>
