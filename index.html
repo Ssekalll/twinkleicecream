@@ -152,9 +152,11 @@ function toggleMusic() {
 
 <!-- ===================== HEADER ===================== -->
 <header>
-    <h1>Twinkle Ice Cream</h1>
-    <p id="walecome text">
-        Di sini, tiap rasa serasa angin pantai, adem, ringan, dan manisnya nyentuh hati. Pilih scoop yang kamu suka! semoga hari mu menjadi selembut ombak yang tenang</p>
+    <h1 id="title">Twinkle Ice Cream</h1>
+
+    <p id="welcomeText">
+        Di sini, tiap rasa serasa angin pantai, adem, ringan, dan manisnya nyentuh hati. Pilih scoop yang kamu suka!
+    </p>
 
     <div class="language-box">
         <select id="languageSelector" onchange="changeLanguage()">
@@ -165,6 +167,7 @@ function toggleMusic() {
             <option value="cn">China</option>
             <option value="th">Thailand</option>
             <option value="es">Spanyol</option>
+            <option value="fr">Prancis</option>
         </select>
     </div>
 </header>
@@ -174,89 +177,317 @@ function toggleMusic() {
 
 <!-- ===================== MENU SECTION ===================== -->
 <section class="menu-section">
-    <h2>Menu Ice Cream</h2>
+    <h2 id="menuTitle">Menu Ice Cream</h2>
+
     <div class="menu-grid">
-
         <div class="menu-card">
-            <img src="https://akcdn.detik.net.id/community/media/visual/2021/04/23/coconut-ice-cream-ala-kreasi-sasa_43.jpeg?w=700&q=90" alt="ice cream">
-            <h3>Vanilla Fruit</h3>
-            <p>Small: Rp23.000<br>Medium: Rp37.000<br>Large: Rp46.000</p>
+            <img src="https://akcdn.detik.net.id/community/media/visual/2021/04/23/coconut-ice-cream-ala-kreasi-sasa_43.jpeg?w=700&q=90">
+            <h3 id="m1_name">Vanilla Fruit</h3>
+            <p id="m1_price">Small: Rp23.000<br>Medium: Rp37.000<br>Large: Rp46.000</p>
         </div>
 
         <div class="menu-card">
-            <img src="https://laz-img-sg.alicdn.com/p/794fd7ea4dc9b28b8b4723d001f9f84e.jpg" alt="ice cream">
-            <h3>Soft Strawberry</h3>
-            <p>Small: Rp23.000<br>Medium: Rp35.000<br>Large: Rp40.000</p>
+            <img src="https://laz-img-sg.alicdn.com/p/794fd7ea4dc9b28b8b4723d001f9f84e.jpg">
+            <h3 id="m2_name">Soft Strawberry</h3>
+            <p id="m2_price">Small: Rp23.000<br>Medium: Rp35.000<br>Large: Rp40.000</p>
         </div>
 
         <div class="menu-card">
-            <img src="https://www.cocoabox.com.au/wp-content/uploads/2021/02/double-chocolate-ice-cream-recipe.jpg" alt="ice cream">
-            <h3>Double Choco</h3>
-            <p>Small: Rp21.000<br>Medium: Rp34.000<br>Large: Rp43.000</p>
+            <img src="https://www.cocoabox.com.au/wp-content/uploads/2021/02/double-chocolate-ice-cream-recipe.jpg">
+            <h3 id="m3_name">Double Choco</h3>
+            <p id="m3_price">Small: Rp21.000<br>Medium: Rp34.000<br>Large: Rp43.000</p>
         </div>
 
         <div class="menu-card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdYaKDEWrVLzgv2WWbwFk62A41dDzXBH5b-g&s" alt="ice cream">
-            <h3>BubbleGum Sprinkle</h3>
-            <p>Small: Rp20.000<br>Medium: Rp35.000<br>Large: Rp40.000</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdYaKDEWrVLzgv2WWbwFk62A41dDzXBH5b-g&s">
+            <h3 id="m4_name">BubbleGum Sprinkle</h3>
+            <p id="m4_price">Small: Rp20.000<br>Medium: Rp35.000<br>Large: Rp40.000</p>
         </div>
-
     </div>
 </section>
 
 <!-- ===================== BODY CONTENT ===================== -->
 <section class="body-content">
-    <h2>Rasa Ice Cream</h2>
-    <p id="description">
-        Vanilla Fruit: Perpaduan es krim vanilla yang lembut dengan potongan buah segar. Rasanya creamy namun tetap ringan, menghadirkan keseimbangan antara manisnya vanilla dan kesegaran buah. Setiap suapan memberikan sensasi segar dan halus yang mudah dinikmati oleh semua kalangan.
-    <p id="description">
-        Es krim strawberry dengan tekstur lembut dan rasa yang natural. Manisnya tidak berlebihan, menghadirkan kesegaran buah asli dengan aroma yang halus. Cocok bagi pelanggan yang menyukai rasa ringan, segar, dan tidak terlalu tajam.
-    </p id="description">
-    Es krim coklat premium dengan cita rasa yang kaya dan pekat. Dilengkapi tambahan coklat atau saus coklat yang memberikan lapisan rasa lebih mendalam. Manisnya seimbang, menghasilkan pengalaman coklat yang intens namun tetap nyaman dinikmati.
-    </p id="description">
-    Es krim bubblegum dengan aroma manis khas permen karet. Teksturnya lembut, dilengkapi taburan sprinkle warna-warni yang memberikan sensasi renyah. Rasa ini menghadirkan kesan playful namun tetap ringan, cocok untuk anak-anak maupun dewasa.
+    <h2 id="rasaTitle">Rasa Ice Cream</h2>
+
+    <p id="desc1">Vanilla Fruit: Perpaduan es krim vanilla yang lembut dengan potongan buah segar.</p>
+    <p id="desc2">Es krim strawberry dengan tekstur lembut dan rasa yang natural.</p>
+    <p id="desc3">Es krim coklat premium dengan cita rasa yang kaya dan pekat.</p>
+    <p id="desc4">Es krim bubblegum dengan aroma manis khas permen karet.</p>
 
     <div class="sunset-anim"></div>
 
     <br><br>
-    <a href="order.html" style="padding:12px 20px; background:#ff75b4; color:white; border-radius:12px; text-decoration:none;">
+    <a id="orderBtn" href="order.html"
+       style="padding:12px 20px; background:#ff75b4; color:white; border-radius:12px; text-decoration:none;">
         🍦 Pesan Ice Cream Sekarang
     </a>
 </section>
 
 <!-- ===================== FOOTER ===================== -->
 <footer>
-    <h3>Informasi Toko</h3>
-    <p>Expired: 3 bulan dari tanggal produksi</p>
-    <p>Alamat: Jl. Bahagia No.25, Jakarta</p>
-    <p>Kontak: 0812-3456-7890 | Email: twinkleicecream@toko.com</p>
-    <p>Cara order: Pilih menu → Tentukan ukuran → Isi form pemesanan → Kami hubungi Anda!</p>
+    <h3 id="ft_title">Informasi Toko</h3>
+
+    <p id="ft_expired">Expired: 3 bulan dari tanggal produksi</p>
+    <p id="ft_addr">Alamat: Jl. Bahagia No.25, Jakarta</p>
+    <p id="ft_contact">Kontak: 0812-3456-7890 | Email: twinkleicecream@toko.com</p>
+    <p id="ft_order">Cara order: Pilih menu → Tentukan ukuran → Isi form pemesanan → Kami hubungi Anda!</p>
 </footer>
 
+<!-- ===================== MULTI LANGUAGE SCRIPT ===================== -->
 <script>
-/* ===================== MULTI LANGUAGE FIX ===================== */
 function changeLanguage() {
     const lang = document.getElementById("languageSelector").value;
 
-    const translations = {
-        id: "Di sini, tiap rasa serasa angin pantai, adem, ringan, dan manisnya nyentuh hati. Pilih scoop yang kamu suka! semoga hari mu menjadi selembut ombak yang tenang",
-        en: "Here, every taste feels like a sea breeze, cool, light, and sweet, touching the heart. Choose the scoop you like! May your day be as gentle as the calm waves.",
-        kr: "이곳에서는 모든 맛이 바닷바람처럼 시원하고, 가볍고, 달콤하게 마음을 어루만집니다. 마음에 드는 스쿱을 선택하세요! 잔잔한 파도처럼 상쾌한 하루를 보내시길 바랍니다.",
-        jp: "まるで海風のように、冷たく、軽やかで、甘く、心に触れる味わい。お好みの一杯をお選びください！穏やかな波のように、穏やかな一日をお過ごしください。",
-        cn: "在这里，每一口都像海风般清凉、轻盈、甘甜，沁人心脾。选择你喜欢的口味吧！愿你今天像平静的海浪一样温柔。",
-        th: "ที่นี่ ทุกรสชาติสัมผัสราวกับสายลมทะเล เย็น เบา และหวาน สัมผัสหัวใจ เลือกสกู๊ปที่คุณชอบได้เลย! ขอให้วันของคุณราบรื่นดุจดังคลื่นทะเลที่สงบ ",
-        es: "Aquí, cada sabor se siente como la brisa marina: fresco, ligero y dulce, que acaricia el corazón. ¡Elige la bola que más te guste! Que tu día sea tan apacible como las olas tranquilas."
+    const text = {
+        id: {
+            welcome: "Di sini, tiap rasa serasa angin pantai, adem, ringan, dan manisnya nyentuh hati. Pilih scoop yang kamu suka!",
+            menuTitle: "Menu Ice Cream",
+            rasaTitle: "Rasa Ice Cream",
+            order: "🍦 Pesan Ice Cream Sekarang",
+            ft_title: "Informasi Toko",
+            desc1: "Vanilla Fruit: Perpaduan es krim vanilla yang lembut dengan potongan buah segar.",
+            desc2: "Es krim strawberry dengan tekstur lembut dan rasa yang natural.",
+            desc3: "Es krim coklat premium dengan cita rasa yang kaya dan pekat.",
+            desc4: "Es krim bubblegum dengan aroma manis khas permen karet.",
+            ft_expired: "Expired: 3 bulan dari tanggal produksi",
+            ft_addr: "Alamat: Jl. Bahagia No.25, Jakarta",
+            ft_contact: "Kontak: 0812-3456-7890 | Email: twinkleicecream@toko.com",
+            ft_order: "Cara order: Pilih menu → Tentukan ukuran → Isi form pemesanan → Kami hubungi Anda!",
+
+            /* MENU */
+            m1_name: "Vanilla Fruit",
+            m2_name: "Soft Strawberry",
+            m3_name: "Double Choco",
+            m4_name: "BubbleGum Sprinkle",
+
+            m1_price: "Small: Rp23.000\nMedium: Rp37.000\nLarge: Rp46.000",
+            m2_price: "Small: Rp23.000\nMedium: Rp35.000\nLarge: Rp40.000",
+            m3_price: "Small: Rp21.000\nMedium: Rp34.000\nLarge: Rp43.000",
+            m4_price: "Small: Rp20.000\nMedium: Rp35.000\nLarge: Rp40.000"
+        },
+
+        en: {
+            welcome: "Here, every taste feels like a sea breeze — cool, light, and sweet. Choose your scoop!",
+            menuTitle: "Ice Cream Menu",
+            rasaTitle: "Ice Cream Flavors",
+            order: "🍦 Order Ice Cream Now",
+            ft_title: "Store Information",
+            desc1: "Vanilla Fruit: Soft vanilla ice cream with fresh fruit pieces.",
+            desc2: "Strawberry ice cream with a natural sweet and fresh taste.",
+            desc3: "Premium chocolate ice cream with rich deep flavor.",
+            desc4: "Bubblegum ice cream with candy aroma and colorful sprinkles.",
+            ft_expired: "Expired: 3 months from production date",
+            ft_addr: "Address: Happy Street No.25, Jakarta",
+            ft_contact: "Contact: 0812-3456-7890 | Email: twinkleicecream@toko.com",
+            ft_order: "How to order: Choose menu → Pick size → Fill the form → We will contact you!",
+
+            /* MENU */
+            m1_name: "Vanilla Fruit",
+            m2_name: "Soft Strawberry",
+            m3_name: "Double Choco",
+            m4_name: "BubbleGum Sprinkle",
+
+            m1_price: "Small: Rp23.000\nMedium: Rp37.000\nLarge: Rp46.000",
+            m2_price: "Small: Rp23.000\nMedium: Rp35.000\nLarge: Rp40.000",
+            m3_price: "Small: Rp21.000\nMedium: Rp34.000\nLarge: Rp43.000",
+            m4_price: "Small: Rp20.000\nMedium: Rp35.000\nLarge: Rp40.000"
+        },
+
+        kr: {
+            welcome: "이곳에서는 모든 맛이 바닷바람처럼 시원하고 달콤합니다. 스쿱을 선택하세요!",
+            menuTitle: "아이스크림 메뉴",
+            rasaTitle: "아이스크림 맛",
+            order: "🍦 아이스크림 주문하기",
+            ft_title: "매장 정보",
+            desc1: "부드러운 바닐라 아이스크림과 신선한 과일 조각.",
+            desc2: "자연스러운 맛의 딸기 아이스크림.",
+            desc3: "풍부하고 진한 초콜릿 아이스크림.",
+            desc4: "버블껌 향과 스프링클이 들어간 아이스크림.",
+            ft_expired: "유통기한: 제조일로부터 3개월",
+            ft_addr: "주소: 자카르타 행복거리 25번",
+            ft_contact: "연락처: 0812-3456-7890 | 이메일: twinkleicecream@toko.com",
+            ft_order: "주문 방법: 메뉴 선택 → 사이즈 선택 → 양식 작성 → 연락드리겠습니다!",
+
+            /* MENU */
+            m1_name: "바닐라 후르츠",
+            m2_name: "소프트 스트로베리",
+            m3_name: "더블 초코",
+            m4_name: "버블검 스프링클",
+
+            m1_price: "스몰: Rp23.000\n미디움: Rp37.000\n라지: Rp46.000",
+            m2_price: "스몰: Rp23.000\n미디움: Rp35.000\n라지: Rp40.000",
+            m3_price: "스몰: Rp21.000\n미디움: Rp34.000\n라지: Rp43.000",
+            m4_price: "스몰: Rp20.000\n미디움: Rp35.000\n라지: Rp40.000"
+        },
+
+        jp: {
+            welcome: "ここではすべての味が海風のように爽やかで甘く心に触れます。",
+            menuTitle: "アイスクリームメニュー",
+            rasaTitle: "アイスクリームの味",
+            order: "🍦 アイスを注文する",
+            ft_title: "店舗情報",
+            desc1: "バニラアイスにフルーツを加えた優しい味わい。",
+            desc2: "自然な甘さのストロベリーアイスクリーム。",
+            desc3: "濃厚で深みのあるチョコレートアイスクリーム。",
+            desc4: "甘い香りのバブルガムアイスとスプリンクル。",
+            ft_expired: "賞味期限：製造日から3ヶ月",
+            ft_addr: "住所：ジャカルタ 幸せ通り25番",
+            ft_contact: "連絡先：0812-3456-7890 | メール：twinkleicecream@toko.com",
+            ft_order: "注文方法：メニュー選択 → サイズ選択 → フォーム記入 → ご連絡します！",
+
+            /* MENU */
+            m1_name: "バニラフルーツ",
+            m2_name: "ソフトストロベリー",
+            m3_name: "ダブルチョコ",
+            m4_name: "バブルガムスプリンクル",
+
+            m1_price: "スモール: Rp23.000\nミディアム: Rp37.000\nラージ: Rp46.000",
+            m2_price: "スモール: Rp23.000\nミディアム: Rp35.000\nラージ: Rp40.000",
+            m3_price: "スモール: Rp21.000\nミディアム: Rp34.000\nラージ: Rp43.000",
+            m4_price: "スモール: Rp20.000\nミディアム: Rp35.000\nラージ: Rp40.000"
+        },
+
+        cn: {
+            welcome: "在这里，每种味道都像海风一样清爽与甜美。",
+            menuTitle: "冰淇淋菜单",
+            rasaTitle: "冰淇淋口味",
+            order: "🍦 立即订购冰淇淋",
+            ft_title: "商店信息",
+            desc1: "香草水果：柔滑香草冰淇淋搭配新鲜水果。",
+            desc2: "天然甜味的草莓冰淇淋。",
+            desc3: "浓郁醇厚的巧克力冰淇淋。",
+            desc4: "泡泡糖冰淇淋搭配彩色糖针。",
+            ft_expired: "保质期：生产日起3个月",
+            ft_addr: "地址：雅加达幸福街25号",
+            ft_contact: "联系方式：0812-3456-7890 | 邮箱：twinkleicecream@toko.com",
+            ft_order: "下单方式：选择菜单 → 选择尺寸 → 填写表单 → 我们会联系你！",
+
+            /* MENU */
+            m1_name: "香草水果",
+            m2_name: "软草莓",
+            m3_name: "双重巧克力",
+            m4_name: "泡泡糖彩针",
+
+            m1_price: "小份: Rp23.000\n中份: Rp37.000\n大份: Rp46.000",
+            m2_price: "小份: Rp23.000\n中份: Rp35.000\n大份: Rp40.000",
+            m3_price: "小份: Rp21.000\n中份: Rp34.000\n大份: Rp43.000",
+            m4_price: "小份: Rp20.000\n中份: Rp35.000\n大份: Rp40.000"
+        },
+
+        th: {
+            welcome: "ที่นี่ทุกรสชาติให้ความรู้สึกเหมือนลมทะเล เย็น เบา และหวาน",
+            menuTitle: "เมนูไอศกรีม",
+            rasaTitle: "รสชาติไอศกรีม",
+            order: "🍦 สั่งไอศกรีมตอนนี้",
+            ft_title: "ข้อมูลร้าน",
+            desc1: "วานิลลาผลไม้: ไอศกรีมวานิลลานุ่มผสมผลไม้สด.",
+            desc2: "ไอศกรีมสตรอว์เบอร์รีที่มีรสธรรมชาติ.",
+            desc3: "ไอศกรีมช็อกโกแลตเข้มข้น.",
+            desc4: "ไอศกรีมบับเบิลกัมพร้อมสปริงเคิลสีสันสดใส.",
+            ft_expired: "หมดอายุ: 3 เดือนจากวันผลิต",
+            ft_addr: "ที่อยู่: ถนนแห่งความสุข 25 จาการ์ตา",
+            ft_contact: "ติดต่อ: 0812-3456-7890 | อีเมล: twinkleicecream@toko.com",
+            ft_order: "วิธีสั่ง: เลือกเมนู → เลือกขนาด → กรอกฟอร์ม → เราจะติดต่อกลับ!",
+
+            /* MENU */
+            m1_name: "วานิลลาผลไม้",
+            m2_name: "สตรอว์เบอร์รีนุ่ม",
+            m3_name: "ดับเบิลช็อกโกแลต",
+            m4_name: "บับเบิลกัมโรยสี",
+
+            m1_price: "เล็ก: Rp23.000\nกลาง: Rp37.000\nใหญ่: Rp46.000",
+            m2_price: "เล็ก: Rp23.000\nกลาง: Rp35.000\nใหญ่: Rp40.000",
+            m3_price: "เล็ก: Rp21.000\nกลาง: Rp34.000\nใหญ่: Rp43.000",
+            m4_price: "เล็ก: Rp20.000\nกลาง: Rp35.000\nใหญ่: Rp40.000"
+        },
+
+        es: {
+            welcome: "Aquí, cada sabor se siente como la brisa marina — fresco, ligero y dulce.",
+            menuTitle: "Menú de Helados",
+            rasaTitle: "Sabores de Helado",
+            order: "🍦 Ordenar Helado Ahora",
+            ft_title: "Información de la Tienda",
+            desc1: "Vainilla Frutal: helado suave con trozos de fruta fresca.",
+            desc2: "Helado de fresa con sabor natural y refrescante.",
+            desc3: "Helado de chocolate premium con sabor intenso.",
+            desc4: "Helado de chicle con coloridos sprinkles.",
+            ft_expired: "Caducidad: 3 meses desde la producción",
+            ft_addr: "Dirección: Calle Felicidad No.25, Yakarta",
+            ft_contact: "Contacto: 0812-3456-7890 | Email: twinkleicecream@toko.com",
+            ft_order: "Cómo ordenar: Menú → Tamaño → Formulario → Te contactamos.",
+
+            /* MENU */
+            m1_name: "Vainilla Frutal",
+            m2_name: "Fresa Suave",
+            m3_name: "Doble Choco",
+            m4_name: "Chicle con Sprinkles",
+
+            m1_price: "Pequeño: Rp23.000\nMediano: Rp37.000\nGrande: Rp46.000",
+            m2_price: "Pequeño: Rp23.000\nMediano: Rp35.000\nGrande: Rp40.000",
+            m3_price: "Pequeño: Rp21.000\nMediano: Rp34.000\nGrande: Rp43.000",
+            m4_price: "Pequeño: Rp20.000\nMediano: Rp35.000\nGrande: Rp40.000"
+        },
+
+        fr: {
+            welcome: "Ici, chaque saveur ressemble à une brise marine — fraîche, légère et douce.",
+            menuTitle: "Menu de Glaces",
+            rasaTitle: "Saveurs de Glace",
+            order: "🍦 Commander une glace",
+            ft_title: "Informations du magasin",
+            desc1: "Vanille Fruit : glace vanille douce avec morceaux de fruits frais.",
+            desc2: "Glace à la fraise au goût naturel et rafraîchissant.",
+            desc3: "Glace chocolat riche et intense.",
+            desc4: "Glace bubblegum avec des paillettes colorées.",
+            ft_expired: "Expiration : 3 mois après production",
+            ft_addr: "Adresse : Rue Bonheur 25, Jakarta",
+            ft_contact: "Contact : 0812-3456-7890 | Email : twinkleicecream@toko.com",
+            ft_order: "Comment commander : Choisir → Taille → Formulaire → Nous vous contactons.",
+
+            /* MENU */
+            m1_name: "Vanille Fruit",
+            m2_name: "Fraise Douce",
+            m3_name: "Double Choco",
+            m4_name: "Bubblegum Paillettes",
+
+            m1_price: "Petit: Rp23.000\nMoyen: Rp37.000\nGrand: Rp46.000",
+            m2_price: "Petit: Rp23.000\nMoyen: Rp35.000\nGrand: Rp40.000",
+            m3_price: "Petit: Rp21.000\nMoyen: Rp34.000\nGrand: Rp43.000",
+            m4_price: "Petit: Rp20.000\nMoyen: Rp35.000\nGrand: Rp40.000"
+        }
     };
 
-    document.getElementById("walecome text").textContent = translations[lang];
+    document.getElementById("welcomeText").textContent = text[lang].welcome;
+    document.getElementById("menuTitle").textContent = text[lang].menuTitle;
+    document.getElementById("rasaTitle").textContent = text[lang].rasaTitle;
+
+    document.getElementById("desc1").textContent = text[lang].desc1;
+    document.getElementById("desc2").textContent = text[lang].desc2;
+    document.getElementById("desc3").textContent = text[lang].desc3;
+    document.getElementById("desc4").textContent = text[lang].desc4;
+
+    document.getElementById("orderBtn").textContent = text[lang].order;
+
+    document.getElementById("ft_title").textContent = text[lang].ft_title;
+    document.getElementById("ft_expired").textContent = text[lang].ft_expired;
+    document.getElementById("ft_addr").textContent = text[lang].ft_addr;
+    document.getElementById("ft_contact").textContent = text[lang].ft_contact;
+    document.getElementById("ft_order").textContent = text[lang].ft_order;
+
+    /* === UPDATE BAGIAN MENU === */
+    document.getElementById("m1_name").textContent = text[lang].m1_name;
+    document.getElementById("m2_name").textContent = text[lang].m2_name;
+    document.getElementById("m3_name").textContent = text[lang].m3_name;
+    document.getElementById("m4_name").textContent = text[lang].m4_name;
+
+    document.getElementById("m1_price").innerHTML = text[lang].m1_price.replace(/\n/g, "<br>");
+    document.getElementById("m2_price").innerHTML = text[lang].m2_price.replace(/\n/g, "<br>");
+    document.getElementById("m3_price").innerHTML = text[lang].m3_price.replace(/\n/g, "<br>");
+    document.getElementById("m4_price").innerHTML = text[lang].m4_price.replace(/\n/g, "<br>");
 }
 
-/* Jalankan saat halaman pertama kali dimuat */
-window.onload = () => {
-    changeLanguage();
-};
+window.onload = () => changeLanguage();
 </script>
-
 
 </body>
 </html>
